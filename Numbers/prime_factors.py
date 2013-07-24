@@ -4,18 +4,18 @@ def prime_fac(n):
 	primes = []
 	prime_factors = []
 	if n == 1:
-		print prime_factors
+		prime_factors = []
 	if n == 2:
-		prime_factors.append[2]
-		print prime_factors
+		prime_factors.append(2)
 	else:
-		for x in xrange[1,n]:
-			for y in xrange[1,x]:
-				if y != 1 and y != x and x % y == 0:
+		for x in xrange(1,n):
+			for y in xrange(2,x+1):
+				if y != x and x % y == 0:
 					break
-				if y=x:
-					primes.append[x]
+				if y==x:
+					primes.append(y)
 		for p in primes:
 			if n % p == 0:
-				prime_factors.append[p]
-		print prime_factors
+				prime_factors.append(p)
+	print primes
+	print prime_factors
